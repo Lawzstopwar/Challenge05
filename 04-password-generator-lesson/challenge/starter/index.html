@@ -10,38 +10,41 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>Password Generator</h1>
+        <h1 class= "title"> Password Generator</h1>
       </header>
       <div class="card">
         <div class="card-header">
-          <h2>Generate a Password</h2>
+          <h2 class="password-display">Generate a Password</h2>
         </div>
         <div class="card-body">
-          <h3>password</h3>
-          <form>
-            <label for= "characterAmountNumber"> Number of characters</label>
-            <input type="range" min= "1" max= "58" value= "15"
-            id="characterRangeRandomValue">
-            <input type="number" min="1" max="58"
-            id="characterRangeRandomValue">
+          <h3>Select your password characters</h3>
+          <form class= "form">
+            <label for= "character-number"> Number of characters</label>
+            <div class= "character-number">
+            <input class="number-imput" type="range" min="1" max="58" value="15"
+            id="characterRange">
+            <input type="number" min="1" max="58" value="15"
+            id="numberRange">
+            </div>
 
-            <label for="includeLowercase">Include Lowercase</label>
-            <input type="checkbox" id="includeLowecase">
+            <label for="specialCharaters"> Include Special Characters</label>
+            <input type="checkbox" id="specialCharaters">
 
-            <label for="includeUppercase">Include Uppercase</label>
-            <input type="checkbox" id="includeUppercase">
+            <label for="numericCharacters">Include Numeric Characters</label>
+            <input type="checkbox" id="numericCharacters">
 
-            <label for="includeSpecialCharater"> Include Special Charater</label>
-            <input type="checkbox" id="includeSpecialCharater">
+            <label for="lowercasedCharacters">Include Lowercased Characters</label>
+            <input type="checkbox" id="lowercasedCharaters">
 
-            <label for="includeNumbers">Include Numbers</label>
-            <input type="checkbox" id="includeNumbers">
-
+            <label for="uppercasedCharacters">Include Uppercased Characters</label>
+            <input type="checkbox" id="uppercasedCharacters">
+            
+            </form>
 
             
           <textarea
             readonly
-            id="characterRangeRandomValue"
+            id="characterRange"
             placeholder="Your Secure Password"
             aria-label="Generated Password"
           ></textarea>

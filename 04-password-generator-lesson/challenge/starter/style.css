@@ -31,7 +31,7 @@ header {
 }
 
 .card {
-  background-color: hsl(0, 0%, 100%);
+  background-color: hsla(179, 78%, 45%, 0.89);
   border-radius: 5px;
   border-width: 1px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
@@ -40,6 +40,52 @@ header {
   margin: 0 auto;
   max-width: 800px;
   padding: 30px 40px;
+  align-items: center;
+
+  
+}
+
+.form {
+  display: grid;
+  grid-template-columns: auto auto;
+  row-gap: 1.5rem;
+  column-gap: 3rem;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.title {
+  margin: 0;
+  text-align: center;
+
+}
+
+label {
+  font-weight: bold;
+}
+
+.character-number {
+  display: flex;
+  align-items: center;
+}
+
+.number-input {
+  width: 2rem;
+}
+
+.password-display {
+  background-color: white;
+  color: black;
+  padding: 1rem;
+  border: 1px solid black
+  width: 250px;
+  height: 5rem;
+  border-radius: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-break: break-all;
 }
 
 .card-header::after {
@@ -70,6 +116,7 @@ header {
   content: " ";
   display: block;
   clear: both;
+  align-items: center;
 }
 
 .btn {
