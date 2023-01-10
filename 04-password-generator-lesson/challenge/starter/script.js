@@ -120,7 +120,7 @@ function getRandom(arr) {
 
 // Function to generate password with user input
 function generatePassword() {
-  // get all input
+  //Step 1: get all input
 
   // get the number of characters
   var numberOfChar = characterRange.value;
@@ -134,14 +134,49 @@ function generatePassword() {
   var includeNumeric = numericCharactersCheckbox.checked // true or false
 
   // get include lowercase character
-  var includeLower = lowerCasedCharactersCheckbox.checked // true or false
+  var includeLowerCased = lowerCasedCharactersCheckbox.checked // true or false
 
   // get include lowercase character
-  var includeUpper = upperCasedCharactersCheckbox.checked // true or false
+  var includeUpperCased = upperCasedCharactersCheckbox.checked // true or false
 
-  return numberOfChar, includeSpecial, includeNumeric, includeLower, includeUpper
+  
+
+  //step 2: Based from the input, create a pool of characters
+  var characterPool = [];
+
+  // If they checkbox special character, add spececial characters to character 
+  if (includeSpecial == true) {
+    characterPool = characterPool.concat(specialCharacters);
+
+  if (includeNumeric == true) 
+      characterPool = characterPool.concat(numericCharacters);
+
+  if (includeLowerCased == true) 
+        characterPool = characterPool.concat(lowerCasedCharacters);
+
+  if (includeUpperCased == true) 
+        characterPool = characterPool.concat(upperCasedCharacters);
+
+  
+
+  // Step 3: Actual generation of password
+
+  // generate a random number
+  
+  var password = ""
+
+  for(i = 0; 1 < numberOfChar; 1++ ) {
+    var randomNum = Math.floor(Math.random() *characterPool.length)
+    var randomChar = characterPool[randomNum];
+
+   var password = password + randomChar;
+
+  }
 
 
+    return password;
+
+  }
 
 
 }
