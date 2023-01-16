@@ -10,7 +10,8 @@ The password is expected include special characters
 
 The following image shows the web application's appearance and functionality:
 
-![password generator demo](./assets/05-javascript-challenge-demo.png)
+[deployed link](https://lawzstopwar.github.io/Password-Generator/)
+![password generator demo](./assets/Screeshort-PG.png)
 
 
 * To Generate a password when the button is clicked

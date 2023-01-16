@@ -163,13 +163,13 @@ function generatePassword() {
 
   // generate a random number
   
-  var password = ""
+   var password = ""
 
-  for(i = 0; 1 < numberOfChar; 1++ ) {
+  for(i = 0; i < numberOfChar; i++ ) {
     var randomNum = Math.floor(Math.random() *characterPool.length)
     var randomChar = characterPool[randomNum];
 
-   var password = password + randomChar;
+    password = password + randomChar;
 
   }
 
